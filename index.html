@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>His and Hers Hauls and Home | Request Services</title>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Quicksand:wght@400;600&display=swap">
+  <style>
+    :root {
+      --primary: #2a5d75;
+      --accent: #cdd4cc;
+      --bg: #fdfdfc;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Quicksand', sans-serif;
+      background-color: var(--bg);
+      color: #333;
+      margin: 0;
+    }
+    header {
+      background-color: var(--accent);
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    header img {
+      max-height: 80px;
+      margin-bottom: 0.5rem;
+    }
+    nav a {
+      margin: 0 1rem;
+      color: var(--primary);
+      font-weight: bold;
+      text-decoration: none;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    section {
+      padding: 2rem 1rem;
+      max-width: 960px;
+      margin: auto;
+    }
+    h1, h2, h3 {
+      color: var(--primary);
+      text-align: center;
+    }
+    form {
+      background: #fff;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.08);
+    }
+    label {
+      display: block;
+      margin-top: 1rem;
+      font-weight: 600;
+    }
+    select, input, textarea {
+      width: 100%;
+      padding: 8px;
+      margin-top: 0.5rem;
+      margin-bottom: 1rem;
+      border-radius: 4px;
+      border: 1px solid #ccc;
+    }
+    .submit-btn {
+      background-color: var(--primary);
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      font-weight: bold;
+      cursor: pointer;
+      display: block;
+      margin: 2rem auto 1rem;
+    }
+    .submit-btn:hover {
+      background-color: #204b5a;
+    }
+    table {
+      width: 100%;
+      margin-top: 1rem;
+      border-collapse: collapse;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 8px;
+      text-align: left;
+    }
+    th {
+      background-color: var(--accent);
+    }
+    footer {
+      background-color: var(--accent);
+      padding: 1rem;
+      text-align: center;
+      color: #555;
+      font-size: 0.9rem;
+      border-top: 1px solid #ccc;
+    }
+  </style>
+</head>
+<body>
+  <!-- HEADER -->
+  <header>
+    <a href="#top"><img src="/mnt/data/348ea90a-e71b-44d9-8dab-8fc38e336ca4.png" alt="His and Hers Hauls and Home Logo"></a>
+    <h1>His and Hers Hauls and Home</h1>
+    <nav>
+      <a href="#about">About Us</a>
+      <a href="#services">Our Services</a>
+      <a href="#form">Request Form</a>
+    </nav>
+  </header>
+
+  <!-- CONTENT PLACEHOLDER -->
+  <main>
+    <section id="about">
+      <h2>About Us</h2>
+      <p>
+        We’re a real-life couple based in <strong>South Tennessee and Northern Alabama</strong>, working side-by-side to bring comfort, clarity, and care to your home or property.<br><br>
+        Austin is logical, hands-on, and creative — with a background in logistics, inventory, and a deep love for building things, from weight plates to blacksmith projects to music. Whether it’s lifting heavy or fixing the tough stuff, he brings structure and strength to every job.<br><br>
+        Jada is a natural home-maker. She has a gift for organizing, cleaning, and styling — especially when it comes to living room and bedroom décor. She’s also an avid reader and a dedicated student working toward her degree. She played softball for 18 years and brings that same drive and focus to everything she does.<br><br>
+        Oh — and we’re both proud pickle fanatics.<br><br>
+        Together, we’re <strong>His and Hers Hauls and Home</strong> — built on balance, hard work, and the joy of helping people reset their space, one project at a time.
+      </p>
+    </section>
+
+    <section id="services">
+      <h2>Our Individual Services</h2>
+      <ul style="columns: 2; -webkit-columns: 2; -moz-columns: 2; gap: 2rem;">
+        <li>Room Cleaning</li>
+        <li>Bathroom Cleaning</li>
+        <li>Dusting & Surface Wipe-down</li>
+        <li>Kitchen Deep Clean</li>
+        <li>Interior Appliance Cleaning</li>
+        <li>Closet Organization</li>
+        <li>Garage Organization</li>
+        <li>Yard Debris Cleanup</li>
+        <li>Patio Prep & Reset</li>
+        <li>Pool Skimming & Balance</li>
+        <li>Furniture Hauling</li>
+        <li>Scrap Metal Pickup</li>
+        <li>Moving Box Assistance</li>
+        <li>Appliance Disposal</li>
+        <li>Rental Walkthrough Cleaning</li>
+        <li>Unit Reset (Post-Eviction)</li>
+        <li>Gutter Cleaning</li>
+        <li>Planting/Gardening</li>
+        <li>Caregiving Check-ins</li>
+        <li>Light Babysitting</li>
+        <li>Decorating & Event Planning</li>
+      </ul>
+    </section>
+
+    
+  <section id="form">
+  <h2>Service Request Form</h2>
+  <form id="serviceForm" action="#" method="post" onsubmit="return handleSubmit(event)">
+
+    <h3 style="margin-top:2rem">Service Packages</h3>
+    <details>
+      <summary style="cursor: pointer; font-weight: bold; font-size: 1.1rem;">Homeowner Packages</summary>
+      <table>
+        <tr><th>Package</th><th>Includes</th></tr>
+        <tr><td><label><input type="checkbox" name="package" value="small"> Small Space Clean</label></td><td>1 bedroom + 1 bath</td></tr>
+        <tr><td><label><input type="checkbox" name="package" value="standard"> Standard Home Clean</label></td><td>2–3 rooms + 1–2 baths</td></tr>
+        <tr><td><label><input type="checkbox" name="package" value="big"> Big House Clean</label></td><td>3–4 rooms + 2 baths + garage</td></tr>
+        <tr><td><label><input type="checkbox" name="package" value="kitchen"> Deep Kitchen Upgrade</label></td><td>Oven, fridge, cabinets</td></tr>
+      </table>
+    </details>
+
+    <details>
+      <summary style="cursor: pointer; font-weight: bold; font-size: 1.1rem;">Commercial Packages</summary>
+      <table>
+        <tr><th>Package</th><th>Includes</th></tr>
+        <tr><td><label><input type="checkbox" name="package" value="turnover"> Tenant Turnover</label></td><td>Trash out, clean, document</td></tr>
+        <tr><td><label><input type="checkbox" name="package" value="eviction"> Eviction Cleanout</label></td><td>Furniture removal, sanitize</td></tr>
+        <tr><td><label><input type="checkbox" name="package" value="listing"> Pre-Listing Reset</label></td><td>Light clean + touchups</td></tr>
+        <tr><td><label><input type="checkbox" name="package" value="maintenance"> Maintenance Plan</label></td><td>Weekly basic service</td></tr>
+      </table>
+    </details>
+
+    <p><strong>💡 Tip:</strong> You can quickly select a package above if it fits your needs. All packages are customizable — and you can select individual services below or use both together!</p>
+
+    <label>Choose Services</label>
+    <div id="serviceChoices" style="display: flex; flex-wrap: wrap; gap: 1rem;">
+      <label style="flex: 1 1 200px;"><input type="checkbox" name="service" value="cleaning"> House Cleaning</label>
+      <label style="flex: 1 1 200px;"><input type="checkbox" name="service" value="organization"> Organization</label>
+      <label style="flex: 1 1 200px;"><input type="checkbox" name="service" value="moving"> Moving Help</label>
+      <label style="flex: 1 1 200px;"><input type="checkbox" name="service" value="junk"> Junk/Scrap Hauling</label>
+      <label style="flex: 1 1 200px;"><input type="checkbox" name="service" value="pool"> Pool/Yard Maintenance</label>
+      <label style="flex: 1 1 200px;"><input type="checkbox" name="service" value="turnover"> Rental Turnover</label>
+      <label style="flex: 1 1 200px;"><input type="checkbox" name="service" value="eviction"> Eviction Cleanout</label>
+    </div>
+
+    <div id="priceEstimate" style="margin-top: 2rem; font-weight: bold; font-size: 1.1rem; color: #2a5d75; text-align: center;">
+  Package Pricing (estimates):
+  <ul style="list-style: none; padding: 0;">
+    <li>• Small Space Clean – $150</li>
+    <li>• Standard Home Clean – $250</li>
+    <li>• Big House Clean – $400</li>
+    <li>• Deep Kitchen Upgrade – $125</li>
+    <li>• Tenant Turnover – $275</li>
+    <li>• Eviction Cleanout – $350</li>
+    <li>• Pre-Listing Reset – $200</li>
+    <li>• Maintenance Plan – $180/week</li>
+  </ul>
+  <em>Final pricing discussed upon site check.</em>
+</div>
+    <label for="name">Full Name</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email Address</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="sqft">Estimated Square Footage</label>
+    <input type="number" id="sqft" name="sqft" placeholder="e.g. 1200" min="0">
+
+    <label for="rooms">Number of Rooms</label>
+    <input type="number" id="rooms" name="rooms" placeholder="e.g. 3" min="0">
+
+    <label for="baths">Number of Bathrooms</label>
+    <input type="number" id="baths" name="baths" placeholder="e.g. 2" min="0">
+
+    <label for="details">Additional Details <small>(Please provide as much information as possible. The more details, the better we can serve you.)</small></label>
+    <textarea id="details" name="details" rows="4" required></textarea>
+
+    <label for="date">Preferred Service Date</label>
+    <input type="date" id="date" name="date" required>
+
+    <label for="calltime">Best Time to Call and Confirm <small>(Most available weekdays from 3:30 PM – 9:30 PM and 24/7 on weekends.)</small></label>
+    <input type="datetime-local" id="calltime" name="calltime" required>
+
+    <label for="photos">Upload Reference Photos <small>(We require one photo per room and bathroom to ensure accurate quoting and preparation. The more photos, the better!)</small></label>
+    <input type="file" id="photos" name="photos" accept="image/*" multiple required>
+
+    <p><strong>📝 Note:</strong> If you've selected a service that does not involve rooms or bathrooms, please still provide square footage and describe the area clearly in the details box.</p>
+    <label><input type="checkbox" name="nonRoomServiceAck" required> I understand that even for services like hauling, moving, or pool care, square footage and detailed descriptions are still required for accurate estimating.</label>
+
+    <label><input type="checkbox" name="membership" required> Notify me about auto-renewable services, including future promotions, discounts, and special offers.</label>
+
+    <button type="submit" class="submit-btn">Submit Request</button>
+  </form>
+  <div id="confirmationMessage" style="display: none; text-align: center; color: green; font-weight: bold; margin-top: 2rem;">
+    ✅ Thank you! Your request has been submitted. We'll reach out to confirm soon.
+  </div>
+</section>
+</main>
+
+<script>
+function handleSubmit(event) {
+  event.preventDefault();
+  if (!validateForm()) return false;
+
+  document.getElementById('serviceForm').style.display = 'none';
+  document.getElementById('confirmationMessage').style.display = 'block';
+  return false;
+}
+
+function validateForm() {
+  const details = document.getElementById('details').value.trim();
+  const photos = document.getElementById('photos');
+  const rooms = parseInt(document.getElementById('rooms').value) || 0;
+  const baths = parseInt(document.getElementById('baths').value) || 0;
+  const requiredPhotos = rooms + baths;
+
+  if (!details) {
+    alert('Please provide additional details before submitting.');
+    return false;
+  }
+
+  if (!photos.files || photos.files.length === 0) {
+    alert('Please upload at least one reference photo.');
+    return false;
+  }
+
+  if (photos.files.length < requiredPhotos) {
+    alert(`Please upload at least ${requiredPhotos} photo(s) to match the number of rooms and bathrooms entered.`);
+    return false;
+  }
+
+  return true;
+}
+// Pricing logic removed per user request
+}
+
+serviceChoices.forEach(cb => cb.addEventListener('change', calculateEstimate));
+document.getElementById('sqft').addEventListener('input', calculateEstimate);
+document.getElementById('rooms').addEventListener('input', calculateEstimate);
+document.getElementById('baths').addEventListener('input', calculateEstimate);
+document.getElementById('date').addEventListener('change', calculateEstimate);
+
+  <!-- FOOTER -->
+  <footer>
+    &copy; 2025 His and Hers Hauls and Home • Based in South Tennessee & Northern Alabama<br>
+    Built with care, integrity, and a touch of southern charm.
+  </footer>
+</body>
+</html>
