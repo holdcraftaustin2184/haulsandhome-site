@@ -1,7 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js?ver=4"></script>
+  <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script>
+    window.addEventListener('load', function() {
+      emailjs.init('PY72DF1obasIemG1K'); // your public key
+      console.log("✅ EmailJS initialized");
+    });
+  </script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>His and Hers Hauls and Home | Request Services</title>
@@ -256,9 +263,8 @@
 
 <script>
   window.addEventListener('load', () => {
-    if (typeof emailjs !== 'undefined') {
-      emailjs.init('PY72DF1obasIemG1K');
-      console.log("✅ EmailJS initialized");
+    if (typeof emailjs !== 'undefined') {    
+     console.log("✅ EmailJS initialized");
     } else {
       console.error("❌ EmailJS failed to load.");
     }
