@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js?ver=4"></script>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>His and Hers Hauls and Home | Request Services</title>
@@ -108,7 +108,7 @@
 <body>
   <!-- HEADER -->
   <header>
-    <a href="#top"><img src="assets/logo.png" alt="His and Hers Hauls and Home Logo" style="max-height: 80px;">
+    <a href="#top"><img src="logo.png" alt="His and Hers Hauls and Home Logo" style="max-height: 80px;">
     <h1>His and Hers Hauls and Home</h1>
     <nav>
       <a href="#about">About Us</a>
@@ -253,14 +253,50 @@
 </main>
 
 <script>
+  window.addEventListener('load', () => {
+    if (typeof emailjs !== 'undefined') {
+      emailjs.init('PY72DF1obasIemG1K');
+      console.log("✅ EmailJS initialized");
+    } else {
+      console.error("❌ EmailJS failed to load.");
+    }
+  });
+</script>
+
+
+<script>
 function handleSubmit(event) {
   event.preventDefault();
   if (!validateForm()) return false;
 
-  document.getElementById('serviceForm').style.display = 'none';
-  document.getElementById('confirmationMessage').style.display = 'block';
+  console.log("🚀 Submitting form with data:", new FormData(document.getElementById('serviceForm')));
+
+  // Send customer confirmation
+  emailjs.sendForm('service_f7yr7jb', 'template_7kvr91h', document.getElementById('serviceForm'))
+    .then(() => {
+      console.log("✅ Customer email sent");
+    })
+    .catch((error) => {
+      console.error("❌ Failed to send customer email:", error);
+    });
+
+  // Send internal notification
+  emailjs.sendForm('service_f7yr7jb', 'template_o92hbc9', document.getElementById('serviceForm'))
+    .then(() => {
+      console.log("✅ Internal email sent");
+      document.getElementById('serviceForm').style.display = 'none';
+      document.getElementById('confirmationMessage').style.display = 'block';
+    })
+    .catch((error) => {
+      console.error("❌ Failed to send internal email:", error);
+    });
+
   return false;
 }
+
+
+
+
 
 function validateForm() {
   const details = document.getElementById('details').value.trim();
