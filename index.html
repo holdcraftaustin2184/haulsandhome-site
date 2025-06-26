@@ -251,10 +251,7 @@
    
     <label for="calltime">Best Time to Call and Confirm <small>(Most available weekdays from 3:30 PM – 9:30 PM and 24/7 on weekends.)</small></label>
     <input type="datetime-local" id="calltime" name="calltime" required>
-
-    <label for="photos">Upload Reference Photos <small>(We require one photo per room and bathroom to ensure accurate quoting and preparation. The more photos, the better!)</small></label>
-    <input type="file" id="photos" name="photos" accept="image/*" multiple required data-emailjs-exclude>
-
+  
 
     <p><strong>📝 Note:</strong> If you've selected a service that does not involve rooms or bathrooms, please still provide square footage and describe the area clearly in the details box.</p>
     <label><input type="checkbox" name="nonRoomServiceAck" required> I understand that even for services like hauling, moving, or pool care, square footage and detailed descriptions are still required for accurate estimating.</label>
@@ -318,7 +315,6 @@ function handleSubmit(event) {
 
 function validateForm() {
   const details = document.getElementById('details').value.trim();
-  const photos = document.getElementById('photos');
   const rooms = parseInt(document.getElementById('rooms').value) || 0;
   const baths = parseInt(document.getElementById('baths').value) || 0;
   const requiredPhotos = rooms + baths;
@@ -328,18 +324,9 @@ function validateForm() {
     return false;
   }
 
-  if (!photos.files || photos.files.length === 0) {
-    alert('Please upload at least one reference photo.');
-    return false;
-  }
 
-  if (photos.files.length < requiredPhotos) {
-    alert(`Please upload at least ${requiredPhotos} photo(s) to match the number of rooms and bathrooms entered.`);
-    return false;
-  }
+ 
 
-  return true;
-}
 // Pricing logic removed per user request
 
 </script>
