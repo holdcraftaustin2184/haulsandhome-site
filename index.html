@@ -253,7 +253,8 @@
     <input type="datetime-local" id="calltime" name="calltime" required>
 
     <label for="photos">Upload Reference Photos <small>(We require one photo per room and bathroom to ensure accurate quoting and preparation. The more photos, the better!)</small></label>
-    <input type="file" id="photos" name="photos" accept="image/*" multiple required>
+    <input type="file" id="photos" name="photos" accept="image/*" multiple required data-emailjs-exclude>
+
 
     <p><strong>📝 Note:</strong> If you've selected a service that does not involve rooms or bathrooms, please still provide square footage and describe the area clearly in the details box.</p>
     <label><input type="checkbox" name="nonRoomServiceAck" required> I understand that even for services like hauling, moving, or pool care, square footage and detailed descriptions are still required for accurate estimating.</label>
