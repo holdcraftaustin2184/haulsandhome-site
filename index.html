@@ -2,17 +2,16 @@
 <html lang="en">
 <head>
 <script src="https://cdn.emailjs.com/dist/email.min.js?ver=4"></script>
-  
-<script>
-  window.addEventListener('load', function () {
-    if (window.emailjs) {
-      emailjs.init('PY72DF1obasIemG1K'); // your public key
-      console.log('✅ EmailJS v4 initialized');
-    } else {
-      console.error('❌ EmailJS failed to load');
-    }
-  });
+ <script type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js">
 </script>
+<script type="text/javascript">
+   (function(){
+      emailjs.init({
+        publicKey: "PY72DF1obasIemG1K",
+      });
+   })();
+</script> 
 
 
   <meta charset="UTF-8">
