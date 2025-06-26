@@ -317,8 +317,7 @@ function validateForm() {
   const details = document.getElementById('details').value.trim();
   const rooms = parseInt(document.getElementById('rooms').value) || 0;
   const baths = parseInt(document.getElementById('baths').value) || 0;
-  const requiredPhotos = rooms + baths;
-
+  
   if (!details) {
     alert('Please provide additional details before submitting.');
     return false;
